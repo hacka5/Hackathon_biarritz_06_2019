@@ -15,7 +15,7 @@ const RouterFile = () => {
                     color='light'
                     light
                     expand='md'
-                    className='d-flex justify-content-between flex-nowrap fixed-bottom col-12'
+                    className='d-flex justify-content-between flex-nowrap col-12'
                     style={{ fontSize: '12px' }}
                 >
                     <NavLink exact to='/' activeStyle={{ color: 'red' }} style={{ color: 'black', textDecoration: 'none' }}>
