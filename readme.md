@@ -37,3 +37,13 @@ Les chemins utiles de l’API :
 Notes Importantes
 
 Au début de la ligue, chaque Campus possède un classement ELO de 1000 points
+
+// FRONTEND:
+
+// Route "/campuses" : List of all Wild Code School campuses in card format, with the following information: name, creation date, campus manager and photograph of the city where the campus is located (creating a photo gallery).
+
+// Route "/students" :  List of students on cards, in game format, where you have to find the students who do not belong to the Biarritz campus and delete them with a button.
+
+// Route "/matches" : History of all inter-campus duels.
+
+// Route "/ranking" : ELO ranking of the campuses in a table.
