@@ -6,6 +6,7 @@ import Campuses from "./components/campus/Campuses";
 import Students from "./components/students/Students";
 import Matchs from "./components/matchs/Matchs";
 import Ranking from "./components/ranking/Ranking";
+import Footer from './components/footer/Footer';
 
 const RouterFile = () => {
     return (
@@ -37,11 +38,11 @@ const RouterFile = () => {
                 <Switch>
                     <Route exact path='/' component={Home} />
                     <Route exact path='/campuses' component={Campuses} />
-                    <Route exact path='/students' component={Students} />
-                    <Route exact path='/matchs-history' component={Matchs} />
-                    <Route exact path='/ranking' component={Ranking} />
+
                 </Switch>
+                <Footer />
             </Router>
+            
         </div>
     );
 };
