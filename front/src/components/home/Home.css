@@ -1,0 +1,7 @@
+body{
+    margin:0;
+    padding:0;
+    background: url('https://files.slack.com/files-pri/T6SG2QGG2-FKLRTKEM9/img_20190627_151011.jpg') no-repeat center fixed; 
+    -webkit-background-size: cover;
+    background-size: cover; 
+}
