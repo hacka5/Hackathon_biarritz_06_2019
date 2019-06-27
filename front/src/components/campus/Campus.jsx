@@ -16,9 +16,9 @@ class Campus extends Component {
     };
   }
 
-
   render() {
     return (
+      
       <div>
         <Card style={{ border: '1px solid grey' }} className='card-container'>
           <CardTitle>
@@ -46,7 +46,7 @@ class Campus extends Component {
           <div>
             <CardBody>
               <CardSubtitle>
-              <p style={{textAlign:"center"}}>Welcome to <b>{this.props.name}</b></p>
+              <p style={{textAlign:"center", fontSize:18}}>Welcome to <b>{this.props.name}</b></p>
               </CardSubtitle>
               <CardText
                 style={{
@@ -57,8 +57,8 @@ class Campus extends Component {
                   paddingTop: 15,
                 }}
               >
-              This school was created on <b>{this.props.creation}</b>
-                <p style={{paddingTop:20}}>The Campus Manager is <b>{this.props.manager.firstname.toUpperCase()} {this.props.manager.lastname.toUpperCase()}</b></p>
+              <p style={{textAlign:"center"}}>This school was created on <b>{this.props.creation}</b></p>
+                <p style={{paddingTop:15, textAlign:"center"}}>The Campus Manager is <b>{this.props.manager.firstname.toUpperCase()} {this.props.manager.lastname.toUpperCase()}</b></p>
               </CardText>
               <div
                 style={{
