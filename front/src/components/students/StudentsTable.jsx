@@ -6,7 +6,6 @@ import {
   CardSubtitle,
   Button
 } from 'reactstrap';
-import ModalStudent from './ModalStudent';
 
 
 class StudentsCards extends Component {
@@ -26,7 +25,7 @@ class StudentsCards extends Component {
           }));
           console.log('close student');
       }else{
-        return <ModalStudent />
+        return alert("👩🏼‍💻 👨🏼‍💻 I'm a Wilder from Biarritz!!!! 🤓 ")
       }
   }
 
@@ -39,7 +38,7 @@ class StudentsCards extends Component {
   render() {
     return this.state.showStudents ? null :(
       <div>
-        <Card style={{ border: '1px solid grey' }} isOpen={this.state.showStudents} onClose={this.showStudents}>
+        <Card style={{ border: '1px solid grey' }}>
           <CardTitle>
             <h2
               style={{
@@ -54,28 +53,8 @@ class StudentsCards extends Component {
               {this.props.firstname.toUpperCase()} {this.props.lastname.toUpperCase()}
             </h2>
           </CardTitle>
-          <div>
-            <CardBody>
-            
-              <CardSubtitle>
-              <img style={{padding:'15px', float:'left'}}
-            width="100px"
-            height="100px"
-            src='https://cdn-images-1.medium.com/max/1200/1*MccriYX-ciBniUzRKAUsAw.png'
-            alt="Student avatar"
-          />
-              <p style={{textAlign:"center"}}><b>Student of {this.props.campus.toUpperCase()}</b></p>
-              </CardSubtitle>
-              
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  padding: 15,
-                }}
-              />
-              <Button aria-label="Close" onClick={() => this.hideStudent()}>Close Student</Button>
-            </CardBody>
+          <div style={{textAlign:'center', paddingBottom:20}}>
+              <Button aria-label="Close" onClick={() => this.hideStudent()}>Biarritz Wilder ?</Button>
           </div>
         </Card>
       </div>
