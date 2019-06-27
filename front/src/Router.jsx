@@ -44,6 +44,7 @@ const RouterFile = () => {
                 </Switch>
                 <Footer />
             </Router>
+            
         </div>
     );
 };
