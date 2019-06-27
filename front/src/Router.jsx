@@ -4,7 +4,7 @@ import { Navbar } from 'reactstrap';
 import Home from "./components/home/Home";
 import Campuses from "./components/campus/Campuses";
 import Students from "./components/students/Students";
-import Matchs from "./components/matchs/Matchs";
+import Matches from "./components/matches/Matches";
 import Ranking from "./components/ranking/Ranking";
 import Footer from './components/footer/Footer';
 
@@ -28,8 +28,8 @@ const RouterFile = () => {
                     <NavLink to='/students' activeStyle={{ color: 'red' }} style={{ color: 'black', textDecoration: 'none' }}>
                         Students
                     </NavLink>
-                    <NavLink to='/matchs-history' activeStyle={{ color: 'red' }} style={{ color: 'black', textDecoration: 'none' }}>
-                        Matchs history
+                    <NavLink to='/matches' activeStyle={{ color: 'red' }} style={{ color: 'black', textDecoration: 'none' }}>
+                        Matches history
                     </NavLink>
                     <NavLink to='/ranking' activeStyle={{ color: 'red' }} style={{ color: 'black', textDecoration: 'none' }}>
                         Ranking
@@ -38,7 +38,9 @@ const RouterFile = () => {
                 <Switch>
                     <Route exact path='/' component={Home} />
                     <Route exact path='/campuses' component={Campuses} />
-
+                    <Route exact path='/students' component={Students} />
+                    <Route exact path='/matches' component={Matches} />
+                    <Route exact path='/ranking' component={Ranking} />
                 </Switch>
                 <Footer />
             </Router>
