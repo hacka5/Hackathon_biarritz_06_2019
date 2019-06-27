@@ -1,26 +1,40 @@
-const express = require('express');
-const router = express.Router();
-const axios = require('axios');
+const mongoose = require('mongoose');
 
-let dataCampuses;
-
-const getData = async () => {
-	try {
-		return await axios
-			.get('https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/campuses')
-			.then(res => {
-				dataCampuses = res.data;
-			})
-			.finally(() => {});
-	} catch (error) {
-		console.error(error);
+const campusSchema = new mongoose.Schema({
+	name: {
+		type: String,
+		required: true
+	},
+	city: {
+		type: String,
+		required: true
+	},
+	country: {
+		type: String,
+		required: true
+	},
+	uid: {
+		type: String,
+		required: true
+	},
+	creation: {
+		type: String,
+		required: true
+	},
+	manager: {
+		firstname: {
+			type: String
+		},
+		lastname: {
+			type: String
+		}
+	},
+	elo: {
+		type: Number,
+		required: true
 	}
-};
-
-// getData();
-
-router.get('/', async (req, res) => {
-	await res.send(dataCampuses);
 });
 
-module.exports = router;
+const Campus = mongoose.model('Campus', campusSchema);
+
+module.exports = Campus;
