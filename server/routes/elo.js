@@ -82,12 +82,14 @@ const eloCalculator = async () => {
 		looser = null;
 		gameStatus = null;
 	});
-	return eloMap;
+	return await eloMap;
 };
 
 router.get('/', async (req, res) => {
 	const response = await eloCalculator();
-	res.send(response);
+	let eloRankingObject = {};
+	response.forEach((v, k) => (eloRankingObject[k] = v));
+	await res.json(eloRankingObject);
 });
 
 module.exports = router;

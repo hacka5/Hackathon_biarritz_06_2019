@@ -17,7 +17,7 @@ const getData = async () => {
 	}
 };
 
-getData();
+// getData();
 
 router.get('/', async (req, res) => {
 	await res.send(dataMatches);
