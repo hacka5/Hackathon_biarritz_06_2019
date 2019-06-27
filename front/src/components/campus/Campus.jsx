@@ -26,7 +26,7 @@ class Campus extends Component {
               style={{
                 backgroundColor: 'rgb(64, 64, 64)',
                 color: 'white',
-                padding: 20,
+                padding: 10,
                 fontWeight: 'bold',
                 textAlign: 'center',
               }}
@@ -53,18 +53,17 @@ class Campus extends Component {
                   overflow: 'auto',
                   height: 'inherit',
                   textAlign: 'justify',
-                  paddingBottom: 15,
-                  paddingTop: 15,
+            
                 }}
               >
               <p style={{textAlign:"center"}}>This school was created on <b>{this.props.creation}</b></p>
-                <p style={{paddingTop:15, textAlign:"center"}}>The Campus Manager is <b>{this.props.manager.firstname.toUpperCase()} {this.props.manager.lastname.toUpperCase()}</b></p>
+                <p style={{textAlign:"center"}}>The Campus Manager is <b>{this.props.manager.firstname.toUpperCase()} {this.props.manager.lastname.toUpperCase()}</b></p>
               </CardText>
               <div
                 style={{
                   display: 'flex',
                   justifyContent: 'space-between',
-                  padding: 15,
+                  
                 }}
               />
             </CardBody>

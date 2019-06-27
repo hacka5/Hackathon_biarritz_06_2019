@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
-import { Navbar } from 'reactstrap';
+import { Navbar, Row, Col } from 'reactstrap';
 import Home from "./components/home/Home";
 import Campuses from "./components/campus/Campuses";
 import Students from "./components/students/Students";
@@ -13,27 +13,45 @@ const RouterFile = () => {
         <div>
             <Router>
                 <Navbar
-                    color='light'
-                    light
+                    color='dark'
                     expand='md'
-                    className='d-flex justify-content-between flex-nowrap col-12'
-                    style={{ fontSize: '12px' }}
+                    className='d-flex justify-content-around flex-nowrap col-12'
+                    style={{ fontSize: '12px', height:'inherit', padding:25 }}
                 >
-                    <NavLink exact to='/' activeStyle={{ color: 'red' }} style={{ color: 'black', textDecoration: 'none' }}>
-                        Home
+                <Row>
+                <Col sm-6>
+                    <NavLink exact to='/' activeStyle={{ color: 'red' }} style={{ color: 'white', textDecoration: 'none', fontSize:'1.5em', padding:20 }}>
+                        HOME
                     </NavLink>
-                    <NavLink to='/campuses' activeStyle={{ color: 'red' }} style={{ color: 'black', textDecoration: 'none' }}>
-                        Campuses
+                    </Col>
+                    <Col sm-6>
+
+                    <NavLink to='/campuses' activeStyle={{ color: 'red' }} style={{ color: 'white', textDecoration: 'none', fontSize:'1.5em', padding:20 }}>
+                        CAMPUSES
                     </NavLink>
-                    <NavLink to='/students' activeStyle={{ color: 'red' }} style={{ color: 'black', textDecoration: 'none' }}>
-                        Students
+                    </Col>
+
+                    <Col sm-6>
+
+                    <NavLink to='/students' activeStyle={{ color: 'red' }} style={{ color: 'white', textDecoration: 'none', fontSize:'1.5em', padding:20 }}>
+                        STUDENTS
                     </NavLink>
-                    <NavLink to='/matches' activeStyle={{ color: 'red' }} style={{ color: 'black', textDecoration: 'none' }}>
-                        Matches history
+                    </Col>
+                    <Col sm-6>
+
+                    <NavLink to='/matches' activeStyle={{ color: 'red' }} style={{ color: 'white', textDecoration: 'none', fontSize:'1.5em', padding:20 }}>
+                        MATCHES
                     </NavLink>
-                    <NavLink to='/ranking' activeStyle={{ color: 'red' }} style={{ color: 'black', textDecoration: 'none' }}>
-                        Ranking
+                    </Col>
+                    <Col sm-6>
+
+                    <NavLink to='/ranking' activeStyle={{ color: 'red' }} style={{ color: 'white', textDecoration: 'none', fontSize:'1.5em', padding:20 }}>
+                        RANKING
                     </NavLink>
+                    </Col>
+
+                    </Row>
+
                 </Navbar>
                 <Switch>
                     <Route exact path='/' component={Home} />

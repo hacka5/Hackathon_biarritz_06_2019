@@ -259,9 +259,9 @@ class Students extends Component {
 
   render() {
     return (
-      <Container>
-      <h1 style={{textAlign:'center', padding:30}}>Biarritz Wilders "Only"</h1>
-      <p style={{textAlign:'center', color:'red', fontSize:17}}>Removes cards from students who are not part of the Biarritz campus.</p>
+      <Container style={{marginBottom:100}}>
+      <h1 style={{textAlign:'center', paddingTop:40, marginBottom:20}}>Biarritz Wilders "Only"</h1>
+      <p style={{textAlign:'center', color:'white', fontSize:20, padding:25, backgroundColor:'red', width:'80%', margin:'0 auto', marginBottom:40, borderRadius: '71px 71px 71px 71px'}}>Some of the following students are not Biarritz Wilders. Who are the infiltrators ?</p>
       <Row>
 
       {this.state.students.map((student) => (

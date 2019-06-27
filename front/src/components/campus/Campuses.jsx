@@ -40,8 +40,8 @@ class Campuses extends Component {
 
   render() {
     return (
-      <Container>
-      <h1 style={{textAlign:'center', padding:30}}>All Campuses</h1>
+      <Container style={{marginBottom:100}}>
+      <h1 style={{textAlign:'center', paddingTop:40, paddingBottom:40}}>All Campuses</h1>
       
       <Row>
       {this.state.campuses.map((campus, index) => (
