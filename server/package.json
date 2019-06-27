@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hacka5/Hackathon_biarritz_06_2019#readme",
   "dependencies": {
     "axios": "^0.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.6.1"
   }
 }
