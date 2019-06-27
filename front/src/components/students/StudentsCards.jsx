@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD:front/src/components/students/StudentsCards.jsx
 import {
   Card,
   CardTitle,
@@ -7,9 +6,6 @@ import {
 } from 'reactstrap';
 import './style.students.css';
 
-=======
-import { Card, CardTitle, Button } from 'reactstrap';
->>>>>>> db12399f2438be5a37bec5d33756649602ee8428:front/src/components/students/StudentsTable.jsx
 
 class StudentsCards extends Component {
 	constructor(props) {
