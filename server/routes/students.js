@@ -2,18 +2,16 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
-let dataWilders;
+let dataStudents;
 
 const getData = async () => {
 	try {
 		return await axios
 			.get('https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/wilders')
 			.then(res => {
-				dataWilders = res.data;
+				dataStudents = res.data;
 			})
-			.finally(() => {
-				console.log("it's working mf");
-			});
+			.finally(() => {});
 	} catch (error) {
 		console.error(error);
 	}
@@ -22,7 +20,7 @@ const getData = async () => {
 getData();
 
 router.get('/', async (req, res) => {
-	await res.send(dataWilders);
+	await res.send(dataStudents);
 });
 
 module.exports = router;

@@ -34,3 +34,16 @@ Les chemins utiles de l’API :
 Notes Importantes
 
 Au début de la ligue, chaque Campus possède un classement ELO de 1000 points
+
+** User stories : **
+
+BACKEND :
+
+// Avoir une route qui me permet de visualiser la liste des campus de la Wild Code School => ('/campuses') TYPE: .GET
+// Avoir une route qui me permet de visualiser l'historique des duels intercampus => ('/matches') TYPE: .GET
+// Avoir une route qui me permet de visualiser le classement ELO => ('/elo') TYPE: .GET
+// Avoir une route qui me permet de visualiser la liste des élèves de la wild code school => ('/campuses') TYPE: .GET
+
+FRONTEND :
+
+//

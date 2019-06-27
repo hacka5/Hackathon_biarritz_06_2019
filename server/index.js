@@ -11,6 +11,7 @@ const elo = require('./routes/elo');
 app.use('/students', students);
 app.use('/campuses', campuses);
 app.use('/matches', matches);
+app.use('/ranking', elo);
 
 const port = process.env.PORT || 3001;
 

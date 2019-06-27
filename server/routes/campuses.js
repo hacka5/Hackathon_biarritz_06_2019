@@ -11,9 +11,7 @@ const getData = async () => {
 			.then(res => {
 				dataCampuses = res.data;
 			})
-			.finally(() => {
-				console.log("it's working mf");
-			});
+			.finally(() => {});
 	} catch (error) {
 		console.error(error);
 	}
