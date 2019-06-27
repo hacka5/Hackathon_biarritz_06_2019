@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 //SCHEMAS IMPORT
 const students = require('./routes/students');
@@ -21,6 +22,8 @@ mongoose
 	.connect('mongodb://127.0.0.1:27017/hackathon2')
 	.then(() => console.log('Connected succesfully to mongoDB...'))
 	.catch(err => console.error('Could not connect to mongoDB...', err));
+
+app.use(cors());
 
 app.get('/matches', async (req, res) => {
 	const matchesData = await matches.find();
