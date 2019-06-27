@@ -4,6 +4,7 @@ import {
   CardTitle,
   Button
 } from 'reactstrap';
+import './style.students.css';
 
 
 class StudentsCards extends Component {
@@ -30,13 +31,13 @@ class StudentsCards extends Component {
   render() {
     return this.state.showStudents ? null :(
       <div>
-        <Card style={{ border: '1px solid grey' }}>
+        <Card className='student-card'>
           <CardTitle>
             <h2
               style={{
-                backgroundColor: 'rgb(64, 64, 64)',
+                backgroundColor: '#343a40',
                 color: 'white',
-                padding: 10,
+                padding: 20,
                 fontWeight: 'bold',
                 textAlign: 'center',
                 fontSize: 18
@@ -45,8 +46,8 @@ class StudentsCards extends Component {
               {this.props.firstname.toUpperCase()} {this.props.lastname.toUpperCase()}
             </h2>
           </CardTitle>
-          <div style={{textAlign:'center', paddingBottom:20}}>
-              <Button color="info" aria-label="Close" onClick={() => this.hideStudent()}>Delete student</Button>
+          <div className='div-button-delete'>
+              <Button color="warning" aria-label="Close" onClick={() => this.hideStudent()}>Delete student</Button>
           </div>
         </Card>
       </div>
