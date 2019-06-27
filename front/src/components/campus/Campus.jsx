@@ -5,18 +5,22 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  CardImg
+  CardImg,
 } from 'reactstrap';
+import './style.campus.css';
 
 class Campus extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+    };
   }
+
   render() {
     return (
+      
       <div>
-        <Card style={{ border: '1px solid grey' }}>
+        <Card style={{ border: '1px solid grey' }} className='card-container'>
           <CardTitle>
             <h2
               style={{
@@ -24,39 +28,47 @@ class Campus extends Component {
                 color: 'white',
                 padding: 20,
                 fontWeight: 'bold',
-                textAlign: 'center'
+                textAlign: 'center',
               }}
             >
               {this.props.city.toUpperCase()}
             </h2>
           </CardTitle>
-          <CardImg top width="100%" src="https://wildcodeschool.fr/wp-content/uploads/2018/02/biarritz-banner.jpg" alt="Campus image" />
 
-          <CardBody>
-            <CardSubtitle>
-              <b>Creation date:</b> {this.props.creation}
-            </CardSubtitle>
-            <CardText
-              style={{
-                overflow: 'auto',
-                height: 'inherit',
-                textAlign: 'justify',
-                paddingBottom: 15,
-                paddingTop: 15,
-
-              }}
-            >
-              Welcome to <b>{this.props.name}</b>
-            </CardText>
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                padding: 15,
-              }}
-            >
-            </div>
-          </CardBody>
+          <CardImg
+            top
+            width="100%"
+            height="200px"
+            src={this.props.url}
+            alt="Campus image"
+            className="overlay"
+          />
+          <div>
+            <CardBody>
+              <CardSubtitle>
+              <p style={{textAlign:"center", fontSize:18}}>Welcome to <b>{this.props.name}</b></p>
+              </CardSubtitle>
+              <CardText
+                style={{
+                  overflow: 'auto',
+                  height: 'inherit',
+                  textAlign: 'justify',
+                  paddingBottom: 15,
+                  paddingTop: 15,
+                }}
+              >
+              <p style={{textAlign:"center"}}>This school was created on <b>{this.props.creation}</b></p>
+                <p style={{paddingTop:15, textAlign:"center"}}>The Campus Manager is <b>{this.props.manager.firstname.toUpperCase()} {this.props.manager.lastname.toUpperCase()}</b></p>
+              </CardText>
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  padding: 15,
+                }}
+              />
+            </CardBody>
+          </div>
         </Card>
       </div>
     );
