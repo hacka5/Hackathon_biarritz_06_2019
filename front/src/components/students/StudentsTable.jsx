@@ -39,14 +39,14 @@ class StudentsCards extends Component {
                 padding: 10,
                 fontWeight: 'bold',
                 textAlign: 'center',
-                fontSize: 15
+                fontSize: 18
               }}
             >
               {this.props.firstname.toUpperCase()} {this.props.lastname.toUpperCase()}
             </h2>
           </CardTitle>
           <div style={{textAlign:'center', paddingBottom:20}}>
-              <Button aria-label="Close" onClick={() => this.hideStudent()}>Biarritz Wilder ?</Button>
+              <Button color="info" aria-label="Close" onClick={() => this.hideStudent()}>Delete student</Button>
           </div>
         </Card>
       </div>
