@@ -41,9 +41,15 @@ BACKEND :
 
 // Avoir une route qui me permet de visualiser la liste des campus de la Wild Code School => ('/campuses') TYPE: .GET
 // Avoir une route qui me permet de visualiser l'historique des duels intercampus => ('/matches') TYPE: .GET
-// Avoir une route qui me permet de visualiser le classement ELO => ('/elo') TYPE: .GET
-// Avoir une route qui me permet de visualiser la liste des élèves de la wild code school => ('/campuses') TYPE: .GET
+// Avoir une route qui me permet de visualiser le classement ELO => ('/ranking') TYPE: .GET
+// Avoir une route qui me permet de visualiser la liste des élèves de la wild code school => ('/students') TYPE: .GET
 
-FRONTEND :
+FRONTEND:
 
-//
+// Route "/campuses" : List of all Wild Code School campuses in card format, with the following information: name, creation date, campus manager and photograph of the city where the campus is located (creating a photo gallery).
+
+// Route "/students" : List of students on cards, in game format, where you have to find the students who do not belong to the Biarritz campus and delete them with a button.
+
+// Route "/matches" : History of all inter-campus duels.
+
+// Route "/ranking" : ELO ranking of the campuses in a table.
