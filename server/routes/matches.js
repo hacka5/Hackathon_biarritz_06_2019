@@ -1,26 +1,23 @@
-const express = require('express');
-const router = express.Router();
-const axios = require('axios');
+const mongoose = require('mongoose');
 
-let dataMatches;
-
-const getData = async () => {
-	try {
-		return await axios
-			.get('https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/matches')
-			.then(res => {
-				dataMatches = res.data;
-			})
-			.finally(() => {});
-	} catch (error) {
-		console.error(error);
+const matchSchema = new mongoose.Schema({
+	homeTeam: {
+		type: String,
+		required: true
+	},
+	awayTeam: {
+		type: String,
+		required: true
+	},
+	isoDate: {
+		type: String,
+		required: true
+	},
+	winnerUid: {
+		type: String
 	}
-};
-
-// getData();
-
-router.get('/', async (req, res) => {
-	await res.send(dataMatches);
 });
 
-module.exports = router;
+const Match = mongoose.model('Match', matchSchema);
+
+module.exports = Match;
