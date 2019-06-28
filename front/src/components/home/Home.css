@@ -1,6 +1,4 @@
 .bckgrd {
-	margin: 0;
-	padding: 0;
 	background: url('../../assets/photo_groupe.jpg') no-repeat center fixed;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -36,3 +34,13 @@ header {
 	background-color: red;
 	opacity: 0.75;
 }
+
+.photo-decoration {
+    border: 1px solid rgb(175, 175, 175);
+    -webkit-box-shadow: 10px 10px 29px -15px rgba(89,89,89,0.92);
+    -moz-box-shadow: 10px 10px 29px -15px rgba(89,89,89,0.92);
+	box-shadow: 10px 10px 29px -15px rgba(89,89,89,0.92);
+	margin-bottom: 50px;
+	margin-top:30px;
+	width: 100%;
+  }

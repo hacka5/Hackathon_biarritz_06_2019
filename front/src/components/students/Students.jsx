@@ -261,7 +261,7 @@ class Students extends Component {
     return (
       <Container style={{marginBottom:100}}>
       <h1 style={{textAlign:'center', paddingTop:60, marginBottom:20}}>Biarritz Wilders "Only"</h1>
-      <p style={{textAlign:'center', color:'white', fontSize:20, padding:25, backgroundColor:'red', width:'80%', margin:'0 auto', marginBottom:40, borderRadius: '71px 71px 71px 71px'}}>Some of the following 6 are not Biarritz Wilders. Who are the infiltrators ?</p>
+      <p style={{textAlign:'center', fontSize:20, padding:25, margin:'0 auto', marginBottom:40, fontWeight:'bold'}}>⚠⚠️ Some of the following students are not Biarritz Wilders. Who are the infiltrators ? ⚠️⚠️</p>
       <Row>
 
       {this.state.students.map((student) => (

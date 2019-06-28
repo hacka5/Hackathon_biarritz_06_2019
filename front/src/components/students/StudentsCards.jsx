@@ -46,7 +46,7 @@ class StudentsCards extends Component {
             </h2>
           </CardTitle>
           <div className='div-button-delete'>
-              <Button color="warning" aria-label="Close" onClick={() => this.hideStudent()}>Delete student</Button>
+              <Button color="info" aria-label="Close" onClick={() => this.hideStudent()}>Delete student</Button>
           </div>
         </Card>
       </div>
