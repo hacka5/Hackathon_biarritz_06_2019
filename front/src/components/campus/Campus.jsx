@@ -20,15 +20,16 @@ class Campus extends Component {
     return (
       
       <div>
-        <Card style={{ border: '1px solid grey' }} className='card-container'>
+        <Card className='card-container'>
           <CardTitle>
-            <h2
+            <h2 className="overlay-title"
               style={{
-                backgroundColor: 'rgb(64, 64, 64)',
+                backgroundColor: '#343a40',
                 color: 'white',
                 padding: 10,
                 fontWeight: 'bold',
                 textAlign: 'center',
+                
               }}
             >
               {this.props.city.toUpperCase()}

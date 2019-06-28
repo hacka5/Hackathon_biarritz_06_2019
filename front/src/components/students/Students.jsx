@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import StudentsTable from "./StudentsTable";
+import StudentsCards from "./StudentsCards";
 import { Row, Col, Container } from 'reactstrap';
 
 class Students extends Component {
@@ -260,13 +260,13 @@ class Students extends Component {
   render() {
     return (
       <Container style={{marginBottom:100}}>
-      <h1 style={{textAlign:'center', paddingTop:40, marginBottom:20}}>Biarritz Wilders "Only"</h1>
-      <p style={{textAlign:'center', color:'white', fontSize:20, padding:25, backgroundColor:'red', width:'80%', margin:'0 auto', marginBottom:40, borderRadius: '71px 71px 71px 71px'}}>Some of the following students are not Biarritz Wilders. Who are the infiltrators ?</p>
+      <h1 style={{textAlign:'center', paddingTop:60, marginBottom:20}}>Biarritz Wilders "Only"</h1>
+      <p style={{textAlign:'center', color:'white', fontSize:20, padding:25, backgroundColor:'red', width:'80%', margin:'0 auto', marginBottom:40, borderRadius: '71px 71px 71px 71px'}}>Some of the following 6 are not Biarritz Wilders. Who are the infiltrators ?</p>
       <Row>
 
       {this.state.students.map((student) => (
         
-        <Col xs={12} md={6} lg={4} style={{paddingBottom:40}}><StudentsTable {...student} /></Col>
+        <Col xs={12} md={6} lg={4} style={{paddingBottom:40}}><StudentsCards {...student} /></Col>
         ))}
         </Row>
 

@@ -13,10 +13,9 @@ const RouterFile = () => {
         <div>
             <Router>
                 <Navbar
-                    color='dark'
                     expand='md'
                     className='d-flex justify-content-around flex-nowrap col-12'
-                    style={{ fontSize: '12px', height:'inherit', padding:25 }}
+                    style={{ fontSize: '12px', height:'inherit', padding:25, backgroundColor:'#212020' }}
                 >
                 <Row>
                 <Col sm-6>
