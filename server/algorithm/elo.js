@@ -7,7 +7,6 @@ const eloCalculator = async (campusModel, matchModel, ratingDelta) => {
 		return await matchModel.find({});
 	};
 	let matches = await getMatches();
-	console.log(matches);
 	const campuses = await getCampuses();
 	let eloMap = new Map();
 	let winner;
@@ -23,7 +22,6 @@ const eloCalculator = async (campusModel, matchModel, ratingDelta) => {
 		return match.winnerUid != null;
 	});
 	matches.map(match => {
-		console.log(match);
 		winner = match.winnerUid;
 		if (match.homeTeam === winner) {
 			looser = match.awayTeam;
