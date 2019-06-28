@@ -1,12 +1,13 @@
 const eloCalculator = async (campusModel, matchModel, ratingDelta) => {
 	const getCampuses = async () => {
-		return await campusModel.find().sort('isoDate');
+		return await campusModel.find({});
 	};
 
 	const getMatches = async () => {
-		return await matchModel.find();
+		return await matchModel.find({});
 	};
 	let matches = await getMatches();
+	console.log(matches);
 	const campuses = await getCampuses();
 	let eloMap = new Map();
 	let winner;
