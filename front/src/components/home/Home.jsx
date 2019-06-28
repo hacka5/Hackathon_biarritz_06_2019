@@ -8,7 +8,7 @@ function Home() {
     <Container>
       <div style={{ margin: 50 }}>
         <h1 className="titre">
-          Welcome to the inter-campus hackathon competition
+          Welcome to the inter-campus Hackathon competition
         </h1>
         <h3 className="sousTitre">Present by the Hacka5 team!</h3>
         <img src={photo} alt="photo team" className="photo-decoration" />
