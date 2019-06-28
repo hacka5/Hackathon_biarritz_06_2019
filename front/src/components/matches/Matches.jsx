@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Match from './MatchesCards';
+import { Row, Col, Container } from 'reactstrap';
 import Axios from 'axios';
 
 class Matches extends Component {
@@ -20,20 +22,17 @@ class Matches extends Component {
 	}
 
 	render() {
-		console.log(this.state.dataMatches);
 		return (
-			<div>
-				{this.state.dataMatches.map((match, i) => {
-					return (
-						<div key={i}>
-							<li>{match.homeTeam}</li>
-							<li>{match.awayTeam}</li>
-							<li>{match.isoDate}</li>
-							<li>{match.winnerUid}</li>
-						</div>
-					);
-				})}
-			</div>
+			<Container style={{ marginBottom: 100 }}>
+				<h1 style={{ textAlign: 'center', paddingTop: 60, marginBottom: 60 }}>Inter-campus matches</h1>
+				<Row>
+					{this.state.dataMatches.map((eachMatch, i) => (
+						<Col xs={12} md={6} lg={4} style={{ paddingBottom: 40 }}>
+							<Match {...eachMatch} />
+						</Col>
+					))}
+				</Row>
+			</Container>
 		);
 	}
 }

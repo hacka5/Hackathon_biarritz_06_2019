@@ -1,0 +1,20 @@
+.match-card{
+    text-align: center;
+    align-items: center;
+    border: 1px solid grey;
+    -webkit-box-shadow: 10px 10px 29px -15px rgba(89,89,89,0.92);
+    -moz-box-shadow: 10px 10px 29px -15px rgba(89,89,89,0.92);
+    box-shadow: 10px 10px 29px -15px rgba(89,89,89,0.92);
+
+}
+
+.teams{
+    border-radius:150px;
+    -moz-border-radius:150px;
+    -webkit-border-radius:150px;
+    background-color:red;
+    width: 108px;
+    height: 108px;
+    padding: 11%;
+    font-size: 1.6em;
+}

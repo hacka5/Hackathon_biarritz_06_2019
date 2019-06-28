@@ -1,0 +1,11 @@
+.student-card{
+    border: 1px solid grey;
+    -webkit-box-shadow: 10px 10px 29px -15px rgba(89,89,89,0.92);
+    -moz-box-shadow: 10px 10px 29px -15px rgba(89,89,89,0.92);
+    box-shadow: 10px 10px 29px -15px rgba(89,89,89,0.92);
+}
+
+.div-button-delete{
+    text-align:center;
+    padding-bottom: 20px;
+}

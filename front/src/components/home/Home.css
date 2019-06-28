@@ -1,0 +1,38 @@
+.bckgrd {
+	margin: 0;
+	padding: 0;
+	background: url('../../assets/photo_groupe.jpg') no-repeat center fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+h1 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	font-weight: bold;
+	font-size: 3em;
+	color: black;
+}
+
+h3 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	padding-top: 1em;
+	color: black;
+}
+
+.titre {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+header {
+	margin-top: 70px;
+	padding: 50px;
+	background-color: red;
+	opacity: 0.75;
+}
