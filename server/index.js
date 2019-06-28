@@ -42,8 +42,10 @@ app.get('/campuses', async (req, res) => {
 
 app.get('/ranking', async (req, res) => {
 	const response = await eloCalculator(campuses, matches, getRatingDelta);
-	let eloRankingObject = {};
-	response.forEach((v, k) => (eloRankingObject[k] = v));
+	let eloRankingObjects = [];
+	response.forEach((v, k) => {
+		eloRankingObjects.push({ [k]: v });
+	});
 	await res.json(eloRankingObject);
 });
 
