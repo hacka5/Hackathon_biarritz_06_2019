@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Table, Container } from 'reactstrap';
-
 import Axios from 'axios';
 
 class Ranking extends Component {
