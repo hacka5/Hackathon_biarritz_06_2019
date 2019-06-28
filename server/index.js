@@ -5,13 +5,13 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 //SCHEMAS IMPORT
-const students = require('./routes/students');
-const campuses = require('./routes/campuses');
-const matches = require('./routes/matches');
-const eloCalculator = require('./routes/elo');
+const students = require('./schemas/students');
+const campuses = require('./schemas/campuses');
+const matches = require('./schemas/matches');
+const eloCalculator = require('./algorithm/elo');
 
 //ALGORITHM IMPORT
-const { GAME_STATUS, getRatingDelta, getNewRating } = require('./routes/eloRating');
+const { GAME_STATUS, getRatingDelta, getNewRating } = require('./algorithm/eloRating');
 
 // MONGOOSE DEPRECATED METHODS
 mongoose.set('useNewUrlParser', true);
@@ -42,9 +42,11 @@ app.get('/campuses', async (req, res) => {
 
 app.get('/ranking', async (req, res) => {
 	const response = await eloCalculator(campuses, matches, getRatingDelta);
-	let eloRankingObject = {};
-	response.forEach((v, k) => (eloRankingObject[k] = v));
-	await res.json(eloRankingObject);
+	let eloRankingObjects = [];
+	response.forEach((v, k) => {
+		eloRankingObjects.push({ team: k, elo: v });
+	});
+	await res.json(eloRankingObjects);
 });
 
 const port = process.env.PORT || 3002;
